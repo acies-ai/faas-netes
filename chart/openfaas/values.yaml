@@ -214,4 +214,7 @@ istio:
   mtls: false
 
 gatewayExternal:
-  annotations: {}
+  annotations: {
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:us-east-1:804391103805:certificate/8080ec50-041b-437c-99b0-200f0cfbb8ac,
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
+  }
